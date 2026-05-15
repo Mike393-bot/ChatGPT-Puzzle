@@ -21,7 +21,7 @@ body {
   margin: 0;
   display: grid;
   place-items: center;
-  overflow: hidden;
+  overflow: auto;
   padding: 24px;
   font-family: Arial, "Noto Sans KR", sans-serif;
   color: var(--ink);
@@ -50,7 +50,7 @@ button {
 .game {
   position: relative;
   z-index: 1;
-  width: min(100%, 620px);
+  width: min(100%, 780px);
   padding: 22px;
   border: 1px solid rgba(255, 255, 255, 0.72);
   border-radius: 8px;
@@ -211,9 +211,9 @@ h1 {
 
 .board {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 1fr);
-  gap: 10px;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  gap: 8px;
   aspect-ratio: 1;
   padding: 10px;
   border: 1px solid rgba(37, 99, 235, 0.13);
@@ -271,7 +271,7 @@ h1 {
 .card-back::before {
   content: "?";
   color: rgba(255, 255, 255, 0.76);
-  font-size: 28px;
+  font-size: clamp(18px, 4vw, 26px);
   font-weight: 900;
 }
 
@@ -280,7 +280,7 @@ h1 {
   background: var(--card-front);
   box-shadow: 0 8px 16px rgba(23, 32, 51, 0.1);
   color: var(--ink);
-  font-size: clamp(28px, 7vw, 46px);
+  font-size: clamp(22px, 5vw, 38px);
   transform: rotateY(180deg);
 }
 
@@ -314,8 +314,8 @@ h1 {
 }
 
 .animal-image {
-  width: clamp(32px, 7vw, 52px);
-  height: clamp(32px, 7vw, 52px);
+  width: clamp(24px, 5vw, 42px);
+  height: clamp(24px, 5vw, 42px);
   object-fit: contain;
 }
 
@@ -409,7 +409,7 @@ h1 {
   }
 
   .board {
-    gap: 8px;
-    padding: 8px;
+    gap: 5px;
+    padding: 6px;
   }
 }

@@ -1,8 +1,8 @@
 window.PuzzleGame = window.PuzzleGame || {};
 
 const BEST_RECORD_KEY = "peak-memory-match-best-record";
-const COLUMN_COUNT = 4;
-const PAIR_COUNT = 8;
+const COLUMN_COUNT = 6;
+const PAIR_COUNT = 18;
 const MISMATCH_DELAY = 720;
 const HINT_DURATION = 850;
 const MAX_HINTS = 2;
@@ -16,6 +16,16 @@ const animals = [
   { id: "lion", icon: "🦁", label: "사자" },
   { id: "rabbit", icon: "🐰", label: "토끼" },
   { id: "bear", icon: "🐻", label: "곰" },
+  { id: "monkey", icon: "🐵", label: "원숭이" },
+  { id: "tiger", icon: "🐯", label: "호랑이" },
+  { id: "koala", icon: "🐨", label: "코알라" },
+  { id: "pig", icon: "🐷", label: "돼지" },
+  { id: "cow", icon: "🐮", label: "소" },
+  { id: "chick", icon: "🐥", label: "병아리" },
+  { id: "penguin", icon: "🐧", label: "펭귄" },
+  { id: "whale", icon: "🐳", label: "고래" },
+  { id: "octopus", icon: "🐙", label: "문어" },
+  { id: "butterfly", icon: "🦋", label: "나비" },
 ];
 
 function shuffle(items) {

@@ -166,8 +166,8 @@
     }
 
     function getMatchScore() {
-      const speedBonus = Math.max(0, 150 - state.seconds) * 2;
-      const efficiencyBonus = Math.max(0, 24 - state.attempts) * 8;
+      const speedBonus = Math.max(0, 300 - state.seconds) * 2;
+      const efficiencyBonus = Math.max(0, 50 - state.attempts) * 8;
       const comboBonus = state.combo * 60;
       const accuracyBonus = getAccuracyValue() >= 80 ? 120 : 0;
 
@@ -177,7 +177,7 @@
     function finishGame() {
       stopTimer();
       state.finished = true;
-      const finalBonus = Math.max(0, 260 - state.seconds) * 5;
+      const finalBonus = Math.max(0, 520 - state.seconds) * 5;
       const perfectBonus = state.misses === 0 ? 1000 : 0;
       state.score += finalBonus + perfectBonus;
       saveBestRecord({
@@ -246,11 +246,11 @@
     function getRank() {
       const accuracyValue = getAccuracyValue();
 
-      if (state.misses === 0 && state.seconds <= 45 && accuracyValue === 100) {
+      if (state.misses === 0 && state.seconds <= 120 && accuracyValue === 100) {
         return "S+";
       }
 
-      if (accuracyValue >= 85 && state.seconds <= 90) {
+      if (accuracyValue >= 85 && state.seconds <= 220) {
         return "S";
       }
 
