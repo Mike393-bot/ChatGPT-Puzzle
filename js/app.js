@@ -1,0 +1,16 @@
+window.PuzzleGame.setupGame({
+  board: document.querySelector("#board"),
+  restartButton: document.querySelector("#restart-button"),
+  hintButton: document.querySelector("#hint-button"),
+  tryCount: document.querySelector("#try-count"),
+  missCount: document.querySelector("#miss-count"),
+  timer: document.querySelector("#timer"),
+  matchCount: document.querySelector("#match-count"),
+  accuracy: document.querySelector("#accuracy"),
+  combo: document.querySelector("#combo"),
+  rank: document.querySelector("#rank"),
+  score: document.querySelector("#score"),
+  bestScore: document.querySelector("#best-score"),
+  progressBar: document.querySelector("#progress-bar"),
+  message: document.querySelector("#message"),
+});

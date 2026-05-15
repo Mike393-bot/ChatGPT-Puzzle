@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>최고 수준 동물 메모리 매치</title>
+    <link rel="icon" type="image/png" sizes="128x128" href="favicon.png?v=2">
+    <link rel="shortcut icon" href="favicon.ico?v=2">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <main class="game">
+      <header class="game-header">
+        <div>
+          <p class="label">Peak Memory Match</p>
+          <h1>동물 짝 맞추기</h1>
+        </div>
+        <div class="actions" aria-label="게임 조작">
+          <button id="hint-button" class="ghost-action" type="button">힌트</button>
+          <button id="restart-button" class="primary-action" type="button">새 게임</button>
+        </div>
+      </header>
+
+      <section class="score-panel" aria-label="점수 요약">
+        <div>
+          <span>점수</span>
+          <strong id="score">0</strong>
+        </div>
+        <div>
+          <span>최고</span>
+          <strong id="best-score">0</strong>
+        </div>
+        <div>
+          <span>등급</span>
+          <strong id="rank">S</strong>
+        </div>
+      </section>
+
+      <section class="stats" aria-label="게임 상태">
+        <div>
+          <span>시도</span>
+          <strong id="try-count">0</strong>
+        </div>
+        <div>
+          <span>실수</span>
+          <strong id="miss-count">0</strong>
+        </div>
+        <div>
+          <span>시간</span>
+          <strong id="timer">00:00</strong>
+        </div>
+        <div>
+          <span>완성</span>
+          <strong><span id="match-count">0</span>/8</strong>
+        </div>
+        <div>
+          <span>정확도</span>
+          <strong id="accuracy">100%</strong>
+        </div>
+        <div>
+          <span>콤보</span>
+          <strong id="combo">0</strong>
+        </div>
+      </section>
+
+      <section class="meter" aria-label="진행률">
+        <span id="progress-bar"></span>
+      </section>
+
+      <section class="stage" aria-label="카드 무대">
+        <div id="board" class="board" aria-label="4x4 동물 카드 보드"></div>
+      </section>
+
+      <p id="message" class="message" aria-live="polite">카드 두 장을 열어 같은 동물을 찾아보세요.</p>
+    </main>
+
+    <script defer src="js/utiles.js"></script>
+    <script defer src="js/board.js"></script>
+    <script defer src="js/game.js"></script>
+    <script defer src="js/app.js"></script>
+  </body>
+</html>
